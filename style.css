@@ -48,6 +48,7 @@ body {
 
 .menu__item {
   position: relative;
+
   margin-right: 23px;
   font: 500 18px/21px 'roboto', arial, helvetica, sans-serif;
   color: #000;
