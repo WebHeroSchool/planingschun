@@ -9,8 +9,7 @@ body {
 
 .logo {
   position: relative;
-  padding: 40px 0;
-  padding-left: 48px;
+  padding: 40px 0 40px 48px;
   font: bold 24px/31px 'pt_serifbold', arial, helvetica, sans-serif;
 }
 
@@ -22,20 +21,21 @@ body {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .logo__circle_color_blue {
   left: 8px;
   top: 56%;
-  background: #C8DBFB;
+  background: #c8dbfb;
 }
 
 .logo__circle_color_dark-blue {
-  background: #0056EC;
+  background: #0056ec;
 }
 
-.logo, .menu {
+.logo,
+.menu {
   display: inline-block;
 }
 
@@ -62,7 +62,7 @@ body {
   content: '';
   width: 0;
   height: 3px;
-  background: #0056EC;
+  background: #0056ec;
   opacity: 0;
   transition: opacity 0.5s, width 0.5s;
 }
@@ -78,7 +78,7 @@ body {
   left: 0;
   width: 100%;
   height: 3px;
-  background: #0056EC;
+  background: #0056ec;
 }
 
 .menu__item:hover {
@@ -88,12 +88,12 @@ body {
 
 .menu__item:hover::after {
   position: absolute;
-  left: 0;
   display: block;
   content: '';
+  left: 0;
   width: 100%;
   height: 3px;
-  background: #0056EC;
+  background: #0056ec;
 }
 
 .menu__item:hover::after,
@@ -113,15 +113,15 @@ body {
   width: 600px;
   height: 252px;
   margin: 0 0 44px 0;
-  padding-top: 13%;
+  padding: 13% 0 0 3px;
   font: bold 66px/87px 'pt_serifbold', arial, helvetica, sans-serif;
 }
 
 .main__subtitle {
   width: 455px;
   height: 50px;
-  margin: 0 0 44px 0;
-  font: 400 22px/26px 'roboto', arial, helvetica, sans-serif;
+  margin: 0 0 46px 2px;
+  font: 500 22px/26px 'roboto', arial, helvetica, sans-serif;
 }
 
 .main__title-text_highlight {
@@ -130,17 +130,17 @@ body {
 
 .main__button {
   display: inline-block;
-  font: 500 18px/21px 'roboto', arial, helvetica, sans-serif;
+  padding: 18px 21px 7px 8px;
+  margin-left: 2px;
   color: #fff;
   background: #0056ec;
-  padding: 18px 17px 8px 12px;
-  margin-left: 2px;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: opacity .5s;
   width: 244px;
   height: 30px;
   text-align: center;
+  font: 500 18px/21px 'roboto', arial, helvetica, sans-serif;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: opacity 0.5s;
 }
 
 .main__button:hover {
@@ -166,10 +166,10 @@ body {
 }
 
 .image-content {
-  width: 100%;
-  margin-top: 20px;
   display: flex;
   justify-content: center;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .hamburger-menu {
@@ -180,6 +180,7 @@ body {
   .wrapper {
     width: 82%;
 }
+
 }
 
 /* адаптация для 1366px */
@@ -210,15 +211,15 @@ body {
 }
 
   .main {
-    background-size: 55%;
-    background: no-repeat right top url(img/mainimg.svg);
     padding-bottom: 125px;
+    background: no-repeat right 1px top url(img/mainimg.svg);
+    background-size: 55%;
 }
 
   .main__title {
     width: 434px;
-    height: 193px;
-    padding-top: 5%;
+    height: 176px;
+    padding: 5% 0;
     font: bold 50px/66px 'pt_serifbold', arial, helvetica, sans-serif;
 }
 
@@ -229,21 +230,24 @@ body {
 }
 
   .main__button {
-    width: 178px;
+    margin-left: 0;
+    padding: 18px 19px 7px 8px;
+    width: 183px;
     height: 19px;
     font: 500 14px/12px 'roboto', arial, helvetica, sans-serif;
-    margin-left: 0;
 }
 
   .hamburger-menu {
     display: none;
 }
+
 }
 
 @media (max-width: 1300px) {
   .wrapper {
     width: 85%;
-    }
+  }
+
 }
 
 /* адаптация для 1024px */
@@ -295,80 +299,88 @@ body {
   .hamburger-menu {
     display: none;
    }
+
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    width: 95%;
   }
+
+  .main {
+    background-size: 53%;
+  }
+}
 
 /* адаптация 375px */
 @media (max-width: 850px) {
   .wrapper {
     width: 100%;
-      }
+  }
 
   .hamburger-menu {
     display: inline-block;
-      }
+  }
 
   .menu {
     display: none;
     padding-top: 7px;
-      }
+  }
 
   .header {
-    margin-bottom: 1px;
-    margin-left: 28px;
-      }
+    margin: 0 0 1px 28px;
+  }
 
   .logo {
     padding: 28px 0;
     font-size: 0;
-      }
+  }
 
   .logo__circle {
     margin-left: 24px;
     transform: translateY(-70%);
-      }
+  }
 
   .logo__circle_color_blue {
     top: 57%;
-      }
+  }
 
   .main {
     text-align: center;
     padding: 48% 0 0;
     background-size: 53%;
     background-position: top center;
-      }
+  }
 
   .main__title {
-    margin: 0 auto;
-    margin-bottom: 46px;
+    margin: 0 auto 46px;
     padding: 0;
     font: bold 33px/40px 'pt_serif', arial, helvetica, sans-serif;
     width: 273px;
     height: 105px;
-      }
+  }
 
   .main__subtitle {
-    margin: 0 auto;
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
     padding: 0;
     font: 500 16px/19px 'roboto', arial, helvetica, sans-serif;
     width: 237px;
     height: 57px;
-      }
+  }
 
   .main__button {
+    padding: 14px 7px 12px 0;
     font: 500 14px/16px 'roboto', arial, helvetica, sans-serif;
     width: 203px;
-    padding: 14px 7px 12px 0;
-      }
+  }
 
   .image-content {
     display: none;
-        }
+  }
 
   #menu__toggle {
     opacity: 0;
-        }
+  }
 
   .menu__btn {
     display: flex;
@@ -380,7 +392,7 @@ body {
     height: 17px;
     cursor: pointer;
     z-index: 1;
-        }
+  }
 
   .menu__btn > span,
   .menu__btn > span::before,
@@ -392,17 +404,17 @@ body {
     transition: 0.5s;
     background-color: #0056ec;
     transition-duration: 0.25s;
-        }
+  }
 
   .menu__btn > span::before {
     content: '';
     top: -8px;
-        }
+  }
 
   .menu__btn > span::after {
     content: '';
     top: 8px;
-        }
+  }
 
   .menu__box {
     display: block;
@@ -413,14 +425,13 @@ body {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    padding-top: 174px;
-    padding-left: 1px;
+    padding: 174px 0 0 1px;
     list-style: none;
     text-align: center;
     background-color: #fff;
     box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
     transition-duration: 0.25s;
-    }
+  }
 
   .menu {
     display: flex;
@@ -436,7 +447,7 @@ body {
     background: #fff;
     max-width: 100%;
     transition: left 0.5s ease-out;
-   }
+  }
 
   .menu__item {
     display: inline-block;
@@ -448,17 +459,16 @@ body {
     font: 500 30px/25px 'roboto', arial, helvetica, sans-serif;
     text-decoration: none;
     transition-duration: 0.25s;
-    }
+  }
 
   .menu__item:last-child {
-    margin-right: 5px;
-    margin-bottom: 1px;
-    }
+    margin: 0 5px 1px 0;
+  }
 
   .menu__item:hover {
     background-color: #cfd8dc;
     opacity: 0.5;
-    }
+  }
 
   .menu__item_active::after {
     position: absolute;
@@ -466,37 +476,50 @@ body {
     content: '';
     height: 3px;
     background: #0056ec;
-    }
+  }
 
   .menu__item:hover::after {
+    position: absolute;
     display: block;
     content: '';
     max-width: 100%;
     height: 3px;
-    position: absolute;
     background: #0056ec;
-    }
+  }
 
   #menu__toggle:checked ~ .menu__btn > span {
     transform: rotate(45deg);
-    }
+  }
 
   #menu__toggle:checked ~ .menu__btn > span::before {
     top: 0;
     transform: rotate(0);
-    }
+  }
 
   #menu__toggle:checked ~ .menu__btn > span::after {
     top: 0;
     transform: rotate(90deg);
-    }
+  }
 
   #menu__toggle:checked ~ .menu__box {
     visibility: visible;
     left: 0;
-    }
+  }
 
-    }
+}
+
+@media (max-width: 700px) {
+  .main__title {
+    font: bold 30px/40px 'pt_serif', arial, helvetica, sans-serif;
+    height: 92px;
+  }
+
+  .main__subtitle {
+    font: 500 15px/20px 'roboto', arial, helvetica, sans-serif;
+    height: 53px;
+  }
+
+}
 
 @media (max-width: 400px) {
   .main {
@@ -514,7 +537,7 @@ body {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   .header {
     margin-left: 0;
   }
@@ -526,18 +549,25 @@ body {
 
   .main__title {
     padding-left: 6px;
-    font: bold 32px/39px 'pt_serif', arial, helvetica, sans-serif;
+    font: bold 32px/40px 'pt_serif', arial, helvetica, sans-serif;
     height: 105px;
   }
 
   .main__subtitle {
-    padding-left: 6px;
+    padding-left: 7px;
     font: 500 16px/19px 'roboto', arial, helvetica, sans-serif;
+    height: 58px;
+  }
+
+  .main__button {
+    padding: 15px 16px 10px 10px;
+    width: 181px;
   }
 
   .menu__btn {
     right: 24px;
   }
+
 }
 
 @media (max-width: 373px) {
@@ -552,10 +582,12 @@ body {
 
   .main__subtitle {
     padding-left: 8px;
+    height: 57px;
   }
 
   .main__button {
     width: 190px;
     padding: 15px 14px 11px 8px;
   }
+
 }
